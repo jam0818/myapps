@@ -1,0 +1,66 @@
+.app1 {
+    display: flex;
+    gap: 20px;
+}
+
+.input-form {
+    flex: 1;
+}
+
+/* .display-areaのスタイルを変更 */
+.display-area {
+    flex: 1;
+    height: calc(100vh - 100px); /* 表示領域の高さを画面高さから上部の高さを引いた値に設定（100pxはボタン等の高さを考慮した値） */
+    overflow-y: auto; /* 縦方向にスクロール可能にする */
+    padding: 20px; /* 上下左右のパディングを追加（必要に応じて調整） */
+    box-sizing: border-box; /* ボックスモデルをborder-boxに設定してパディングを含む高さを指定 */
+}
+
+.input-form textarea {
+    width: 100%;
+    height: 100px;
+}
+
+.input-form .score {
+    margin-top: 10px;
+}
+
+.display-area ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* history-listクラス内のli要素にスタイルを適用 */
+.history-list li {
+    display: flex; /* Flexコンテナを使用してアイテムを横並びに配置 */
+    justify-content: space-between; /* アイテム間にスペースを均等に配置 */
+    align-items: center; /* アイテムを垂直方向に中央に配置 */
+}
+
+/* テキスト部分のスタイル */
+.history-list li span {
+    flex: 1; /* 残りのスペースを均等に分配して右に寄せる */
+    margin-right: 10px; /* ボタンとの間に余白を設定 */
+}
+
+/* Deleteボタンのスタイル */
+.history-list li button {
+    background-color: #e57373; /* ソフトな赤色 */
+    color: #fff; /* ボタンのテキスト色 */
+    border: none; /* ボーダーをなしに設定 */
+    padding: 5px 10px; /* ボタンのパディング */
+    cursor: pointer; /* ホバー時にカーソルをポインターに変更 */
+    transition: background-color 0.3s; /* 背景色の変化をアニメーション化 */
+}
+
+/* Deleteボタンのホバー時のスタイル */
+.history-list li button:hover {
+    background-color: #f44336; /* ホバー時の赤色 */
+}
+
+/* ページボタンを下部に固定 */
+.pagination {
+    display: flex;
+    justify-content: left;
+    margin-top: 20px; /* 適切なマージンを設定して下部からの間隔を調整 */
+}
